@@ -20,6 +20,8 @@ class Song
     parsed_file_name = filename.split("-")
     new_song = Song.new(parsed_file_name[1].strip)
     new_artist = Artist.new(parsed_file_name[0].strip)
+    new_song.artist = new_artist
+    new_song
   end
   
   def artist_name=(artist)
