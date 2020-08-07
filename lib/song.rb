@@ -24,7 +24,7 @@ class Song
     new_song
   end
   
-  def artist_name=(artist)
+  def artist_name=(name)
     #artist_search = @@all.find {|song|song.artist = artist}
     
     if !self.artist
