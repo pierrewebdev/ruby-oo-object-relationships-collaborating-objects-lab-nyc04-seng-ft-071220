@@ -30,7 +30,7 @@ class Song
     if !self.artist
       artist = Artist.new(artist)
       self.artist = artist
-      binding.pry
+      #binding.pry
     else
       Artist.all.find{|artist|artist.name == artist}
     end
