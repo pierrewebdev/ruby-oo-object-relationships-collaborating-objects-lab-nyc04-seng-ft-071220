@@ -31,7 +31,10 @@ class Song
       artist = Artist.new(artist)
       self.artist = artist
       binding.pry
+    else
+      Artist.all.find{|artist|artist.name == artist}
     end
+    
       
     #binding.pry
   end
