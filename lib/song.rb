@@ -25,18 +25,8 @@ class Song
   end
   
   def artist_name=(name)
-    #artist_search = @@all.find {|song|song.artist = artist}
-    
-    if !self.artist
-      artist = Artist.new(artist)
-      self.artist = artist
-      #binding.pry
-    else
-      Artist.all.find{|artist|artist.name == artist}
-    end
-    
-      
-    #binding.pry
+     self.artist = Artist.find_or_create_by_name(name)
+    artist.add_song(self)
   end
   
 end #end of Song class
