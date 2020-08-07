@@ -30,6 +30,7 @@ class Song
     if !self.artist
       artist = Artist.new(artist)
       self.artist = artist
+      binding.pry
     end
       
     #binding.pry
