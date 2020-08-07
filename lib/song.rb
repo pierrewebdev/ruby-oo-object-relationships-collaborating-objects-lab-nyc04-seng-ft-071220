@@ -28,8 +28,8 @@ class Song
     #artist_search = @@all.find {|song|song.artist = artist}
     
     if !self.artist
-      new_artist = Artist.new(Artist)
-      self.artist = new_artist
+      artist = Artist.new(artist)
+      self.artist = artist
     end
       
     #binding.pry
