@@ -25,7 +25,10 @@ class Song
   end
   
   def artist_name=(artist)
-    @@all
+    artist_search = @@all.find {|song|song.artist = artist}
+    
+    if artist_search
+      
     binding.pry
   end
   
