@@ -25,11 +25,14 @@ class Song
   end
   
   def artist_name=(artist)
-    artist_search = @@all.find {|song|song.artist = artist}
+    #artist_search = @@all.find {|song|song.artist = artist}
     
-    if artist_search
+    if !self.artist
+      new_artist = Artist.new(Artist)
+      self.artist = new_artist
+    end
       
-    binding.pry
+    #binding.pry
   end
   
 end #end of Song class
